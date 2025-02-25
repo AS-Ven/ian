@@ -1,0 +1,83 @@
+:root {
+    --primary: #dac798;
+    --white: #fff;
+    --black: #111;
+    --grey: #333;
+
+    --transition: .3s;
+
+    --button-padding: 1rem 1.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: sans-serif;
+    background-color: var(--white);
+    width: 100vw;
+    background-image: url("https://cdn.mediatheque.epmoo.fr/link/3c9igq/oyg1bkh200wjhz4.jpg");
+}
+
+/* HEADER */
+header {
+    padding: 2rem;
+    width: 100vw;
+    display: flex;
+    height: 10rem;
+    background: transparent;
+    backdrop-filter: blur(5px);
+}
+
+header > a  {
+    filter: invert(1);
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+nav a {
+    color: var(--white);
+    background-color: var(--black);
+    text-decoration: none;
+    padding: var(--button-padding);
+    transition: var(--transition);
+}
+
+/* UL */
+ul {
+    list-style-type: none;
+    margin-left: auto;
+    display: flex;
+}
+
+/* LI */
+ul li {
+    margin: 0 2rem;
+}
+
+/* LI ---> A */
+li a:hover {
+    background-color: var(--primary);
+    color: var(--black);
+}
+
+li:nth-child(4) a {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--primary);
+    padding: var(--button-padding);
+}
+
+li:nth-child(4) a:hover {
+    background-color: var(--primary);
+}
