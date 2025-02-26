@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/logo.svg">
+    <title>Contact</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <a href="./home.html">
+            <img src="./img/logo.svg" alt="Logo du musée d'Orsay">
+        </a>
+        <!-- NAVIGATION -->
+        <nav role="navigation" aria-label="Menu principal">
+            <ul>
+                <li><a href="#">Visite</a></li>
+                <li><a href="#">Ressources</a></li>
+                <li><a href="#" aria-current="page">Contact</a></li>
+                <li><a href="#footer">Aller en bas de la page</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main role="main">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <p><span class="required">*</span> Champs obligatoires</p>
+            <form enctype="text/plain" novalidate>
+                <fieldset>
+                    <legend>Formulaire de contact</legend>
+                    <label for="name">Nom <span class="required">*</span> :</label>
+                    <input type="text" id="name" name="name" placeholder="Entrez votre nom" required aria-required="true" aria-describedby="error-name">
+                    <span id="error-name" class="error-message" aria-live="polite"></span>
+        
+                    <label for="email">Email <span class="required">*</span> :</label>
+                    <input type="email" id="email" name="email" placeholder="exemple@domaine.com" required aria-required="true" aria-describedby="error-email">
+                    <span id="error-email" class="error-message" aria-live="polite"></span>
+        
+                    <label for="subject">Sujet <span class="required">*</span> :</label>
+                    <input type="text" id="subject" name="subject" placeholder="Sujet de votre message" required aria-required="true">
+        
+                    <label for="message">Message <span class="required">*</span> :</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Écrivez votre message ici..." required aria-required="true"></textarea>
+                </fieldset>
+                
+                <button type="submit" aria-label="Envoyer le formulaire de contact">Envoyer</button>
+            </form>
+        </div>
+    </main>
+    
+    <!-- FOOTER -->
+    <footer id="footer" role="contentinfo">
+        <ul>
+            <li><a href="#">Gestion des cookies</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">S'inscrire à la lettre d'information</a></li>
+            <li><a href="#">Mettre à jour son profil à la lettre d'information</a></li>
+            <li><a href="#">Nous rejoindre</a></li>
+        </ul>
+        <p>2025 © Établissement public du musée d'Orsay et du musée de l'Orangerie - Valéry Giscard d'Estaing • Tous droits réservés</p>
+    </footer>
+</body>
+</html>

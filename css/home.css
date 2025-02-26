@@ -1,30 +1,3 @@
-:root {
-    --primary: #dac798;
-    --white: #fff;
-    --black: #111;
-    --grey: #333;
-    --light-grey: #ebebeb;
-
-    --transition: .3s;
-
-    --button-padding: 1rem 1.5rem;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-/* BODY */
-
-body {
-    font-family: sans-serif;
-    background-color: var(--white);
-    width: 100vw;
-}
-
 /* HEADER */
 
 header {
@@ -81,19 +54,19 @@ ul li {
 
 /* LI ---> A */
 
-li a:hover {
+header li a:hover {
     background-color: var(--primary);
     color: var(--black);
 }
 
-li:nth-child(4) a {
+header li:nth-child(4) a {
     background-color: transparent;
     color: var(--white);
     border: 1px solid var(--primary);
     padding: var(--button-padding);
 }
 
-li:nth-child(4) a:hover {
+header li:nth-child(4) a:hover {
     background-color: var(--primary);
 }
 
@@ -165,43 +138,48 @@ main {
     text-align: center;
 }
 
+/* CARTES DES EXPOSITIONS */
 #second-home ul {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-wrap: wrap;
-    width: 100%;
-    row-gap: 4rem;
+    margin-left: 0;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 #second-home ul li {
-    display: flex;
-    justify-content: flex-start;
-    align-items: left;
-    flex-direction: column;
-    gap: 1rem;
-    border: 1px solid var(--black);
-    padding: 1rem;
-    min-height: 30rem;
-    width: 20%;
+    background: var(--white);
+    border: 1px solid var(--light-grey);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: var(--transition);
+    height: 100%;
+    width: 25%;
+}
+
+#second-home ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
+}
+
+#second-home ul li img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
 }
 
 #second-home ul li a {
     text-decoration: underline;
     color: var(--black);
-    margin-top: auto;
     padding: 1rem 0rem;
     transition: var(--transition);  
+    margin-top: auto;
 }
 
 #second-home ul li a:hover {
     color: var(--primary);
-    background-color: var(--white);
-}
-
-#second-home ul li img {
-    width: 15rem;
-    margin-bottom: auto;
 }
 
 #second-home ul li h3 {
@@ -209,8 +187,8 @@ main {
 }
 #second-home ul li p {
     color: var(--grey);
+    margin-bottom: auto;
 }
-
 
 /* FOOTER */
 
@@ -220,6 +198,74 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 6rem;
+    gap: 4rem;
+    flex-direction: column;
+    min-height: 10rem;
     width: 100vw;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+footer ul li a {
+    text-decoration: underline;
+    color: var(--white);
+}
+
+footer p {
+    font-size: .8rem;
+}
+
+/* STYLISATION DU TABLEAU */
+#stats {
+    text-align: center;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 800px;
+    margin-bottom: 20rem;
+}
+
+#stats table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+#stats caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#stats thead {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+#stats th, 
+#stats td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+#stats th {
+    background-color: var(--primary); /* Bleu foncé pour l'accessibilité */
+    color: var(--black);
+}
+
+#stats tr:nth-child(even) {
+    background-color: #f2f2f2; /* Gris clair pour alterner */
+}
+
+#stats tr:hover {
+    background-color: #dcdcdc; /* Effet au survol */
 }
