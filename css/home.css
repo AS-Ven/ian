@@ -110,7 +110,7 @@ main {
 #first-home a {
     color: var(--white);
     background-color: var(--black);
-    text-decoration: underline;
+    text-decoration: none;
     padding: 1rem 2rem;
     margin-top: 2rem;
     transition: var(--transition);
